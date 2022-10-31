@@ -1,0 +1,15 @@
+version: '3'
+services:
+#Sample-Application
+  helloworld:
+    build: ./helloapp/HelloDockerfile
+#Nginx-Webserver
+  nginx:
+    build: ./nginx/NginxDockerfile
+    ports:
+       - "80:80"
+#Mysql-Database
+  mysql:
+    build: ./mysql
+    ports:
+       - "3306:3306"
